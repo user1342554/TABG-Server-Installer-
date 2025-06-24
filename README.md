@@ -17,7 +17,7 @@
 
 ## Quick start
 
-### Graphical wizard
+
 
 1. Download the latest **`TabgInstaller.Gui.zip`** from the [releases page](../../releases).
 2. Unzip and double‑click **`TabgInstaller.exe`**.
@@ -38,7 +38,7 @@ dotnet TabgInstaller.Core.dll `
 
 ---
 
-## Project layout (i have no idea)
+## Project layout 
 
 | Project                             | Type            | Description                                                 |
 | ----------------------------------- | --------------- | ----------------------------------------------------------- |
