@@ -41,7 +41,7 @@
 3. Confirm the detected Steam library path or browse manually.
 4. Pick a server name, select optional plug‑ins, and press **Install**.
 5. The installer will download everything and set up your files. This may take a minute or two.
-6. When the TABG Starter Pack window appears, tweak your default load-out and other options. [Need help configuring Click here!](docs/starter-pack.md)
+6. When the TABG Starter Pack window appears, tweak your default load-out and other options. Need help configuring [Click here!](docs/starter-pack.md)
 7. Close the Starter Pack when you’re done—you can reopen it anytime to adjust settings.
 8. A separate Configuration window will pop up next. Use it to edit every server parameter.
 More details are in the online docs.
