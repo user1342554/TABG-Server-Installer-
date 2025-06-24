@@ -1,14 +1,10 @@
 # 🛠️ TABG Dedicated Server Toolkit
 
-*A zero‑friction installer & mod‑loader for **Totally Accurate Battlegrounds** dedicated servers.*
-
-
-
-> **A fresh TABG server from scratch—in under one minute.**
+*A installer & mod‑loader for **Totally Accurate Battlegrounds** dedicated servers.*
 
 ---
 
-## ✨ Features
+## Features
 
 * **One‑click install** – wizard detects your Steam library & sets everything up automatically.
 * **BepInEx 5 built‑in** – modern Unity mod loader configured out of the box.
@@ -19,7 +15,7 @@
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 ### Graphical wizard
 
@@ -27,7 +23,7 @@
 2. Unzip and double‑click **`TabgInstaller.exe`**.
 3. Confirm the detected Steam library path or browse manually.
 4. Pick a server name, select optional plug‑ins, and press **Install**.
-5. Grab a coffee—by the time you’re back, your modded TABG server is live! ☕️
+5. Wait
 
 ### Headless / CI
 
@@ -42,7 +38,7 @@ dotnet TabgInstaller.Core.dll `
 
 ---
 
-## 🗂️ Project layout
+## Project layout
 
 | Project                             | Type            | Description                                                 |
 | ----------------------------------- | --------------- | ----------------------------------------------------------- |
@@ -55,7 +51,7 @@ dotnet TabgInstaller.Core.dll `
 
 ---
 
-## 🛠️ Under the hood
+## Insights (i have no idea)
 
 ```mermaid
 flowchart TD
