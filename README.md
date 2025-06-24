@@ -17,7 +17,7 @@
 
 </div>
 
-# 🛠️ TABG Server Installer
+
 
 *An installer & mod‑loader for **Totally Accurate Battlegrounds** dedicated servers.*
 
