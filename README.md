@@ -1,6 +1,25 @@
-# 🛠️ TABG Dedicated Server Toolkit
+<div align="center">
 
-*A installer & mod‑loader for **Totally Accurate Battlegrounds** dedicated servers.*
+<pre>
+ _____                                                               _____ 
+( ___ )-------------------------------------------------------------( ___ )
+ |   |                                                               |   | 
+ |   |  _____  _    ____   ____      ____                            |   | 
+ |   | |_   _|/ \  | __ ) / ___|    / ___|  ___ _ ____   _____ _ __  |   | 
+ |   |   | | / _ \ |  _ \| |  _     \___ \ / _ \ '__\ \ / / _ \ '__| |   | 
+ |   |   | |/ ___ \| |_) | |_| |     ___) |  __/ |   \ V /  __/ |    |   | 
+ |   |  _|_/_/   \_\____/ \____| _  |____/ \___|_|    \_/ \___|_|    |   | 
+ |   |                                                               |   | 
+  |   |           T A B G   S E R V E R   I N S T A L L E R           |   |  
+ |___|                                                               |___| 
+(_____)-------------------------------------------------------------(_____) 
+</pre>
+
+</div>
+
+# 🛠️ TABG Server Installer
+
+*An installer & mod‑loader for **Totally Accurate Battlegrounds** dedicated servers.*
 
 ---
 
@@ -17,8 +36,6 @@
 
 ## Quick start
 
-
-
 1. Download the latest **`TabgInstaller.Gui.zip`** from the [releases page](../../releases).
 2. Unzip and double‑click **`TabgInstaller.exe`**.
 3. Confirm the detected Steam library path or browse manually.
@@ -28,17 +45,17 @@
 ### Headless / CI
 
 ```powershell
-dotnet TabgInstaller.Core.dll `
-  --steamDir "D:\SteamLibrary" `
-  --serverDir "D:\SteamLibrary\steamapps\common\TotallyAccurateBattlegroundsDedicatedServer" `
-  --citrusTag v3.2.0 `
-  --installCommunityServer true `
+dotnet TabgInstaller.Core.dll \
+  --steamDir "D:\SteamLibrary" \
+  --serverDir "D:\SteamLibrary\steamapps\common\TotallyAccurateBattlegroundsDedicatedServer" \
+  --citrusTag v3.2.0 \
+  --installCommunityServer true \
   --skipAntiCheatBypass false
 ```
 
 ---
 
-## Project layout 
+## Project layout
 
 | Project                             | Type            | Description                                                 |
 | ----------------------------------- | --------------- | ----------------------------------------------------------- |
@@ -51,7 +68,7 @@ dotnet TabgInstaller.Core.dll `
 
 ---
 
-## Insights 
+## Insights
 
 ```mermaid
 flowchart TD
