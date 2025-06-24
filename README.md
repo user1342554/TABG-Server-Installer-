@@ -38,7 +38,7 @@ dotnet TabgInstaller.Core.dll `
 
 ---
 
-## Project layout
+## Project layout (i have no idea)
 
 | Project                             | Type            | Description                                                 |
 | ----------------------------------- | --------------- | ----------------------------------------------------------- |
@@ -51,7 +51,7 @@ dotnet TabgInstaller.Core.dll `
 
 ---
 
-## Insights (i have no idea)
+## Insights 
 
 ```mermaid
 flowchart TD
