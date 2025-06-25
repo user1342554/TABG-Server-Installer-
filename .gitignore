@@ -24,6 +24,9 @@ Thumbs.db
 publish/
 # Allow necessary libraries in Libs/
 !*/Libs/*.dll
+# Allow built mods dlls
+!mods/
+!mods/*.dll
 # Allow markdown, config, and scripts
 !*.md
 !*.ps1
