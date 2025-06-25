@@ -7,35 +7,29 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace TabgInstaller.TestMod
+namespace TabgInstaller.GravityMod
 {
-    [BepInPlugin("tabginstaller.testmod", "Test Mod", "1.0.0")]
-    public class TestModPlugin : BaseUnityPlugin
+    [BepInPlugin("tabginstaller.gravitymod", "Gravity Mod", "1.1.0")]
+    public class GravityModPlugin : BaseUnityPlugin
     {
-        private ConfigEntry<string> _message;
-        private ConfigEntry<float> _interval;
         private ConfigEntry<float> _gravityMult;
-        private ConfigEntry<float> _timeScale;
         private Harmony _harmony;
+        private static float _currentGravityMult = 1f;
 
         private void Awake()
         {
-            _message = Config.Bind("General", "Message", "Test mod loaded!", "Message written to server log periodically");
-            _interval = Config.Bind("General", "IntervalSeconds", 15f, "Seconds between messages");
-            _gravityMult = Config.Bind("Gameplay", "GravityMultiplier", 0.5f, "Multiply world gravity by this factor (e.g., 0.5 = half gravity)");
-            _timeScale = Config.Bind("Gameplay", "TimeScale", 0.5f, "Multiply game time scale (0.5 = slow motion)");
+            _gravityMult = Config.Bind("Gameplay", "DefaultGravityMultiplier", 1f, "Default gravity multiplier when server starts");
 
-            Logger.LogInfo($"TestMod initialized. Message='{_message.Value}', Interval={_interval.Value}s");
+            Logger.LogInfo("GravityMod initialized");
 
-            Time.timeScale = _timeScale.Value;
-            Logger.LogInfo($"Time scale set to {_timeScale.Value}");
+            _currentGravityMult = _gravityMult.Value;
 
             _harmony = new Harmony("tabginstaller.gravitymod");
             var chatMsgCmdType = AccessTools.TypeByName("ChatMessageCommand") ?? Type.GetType("Landfall.Network.ChatMessageCommand, Assembly-CSharp");
             var chatRun = chatMsgCmdType != null ? AccessTools.Method(chatMsgCmdType, "Run") : null;
             if (chatRun != null)
             {
-                _harmony.Patch(chatRun, postfix: new HarmonyMethod(typeof(TestModPlugin), nameof(ChatCommandPostfix)));
+                _harmony.Patch(chatRun, postfix: new HarmonyMethod(typeof(GravityModPlugin), nameof(ChatCommandPostfix)));
                 Logger.LogInfo("Gravity command patch applied (/gravity <factor>)");
             }
             else
@@ -43,16 +37,7 @@ namespace TabgInstaller.TestMod
                 Logger.LogWarning("Failed to find ChatMessageCommand.Run - gravity command disabled");
             }
 
-            StartCoroutine(Loop());
-        }
-
-        private IEnumerator Loop()
-        {
-            while (true)
-            {
-                Logger.LogInfo($"[TestMod] {_message.Value}");
-                yield return new WaitForSeconds(_interval.Value);
-            }
+            StartCoroutine(GravityLoop());
         }
 
         private static void ChatCommandPostfix(byte[] __0, object __1, byte __2)
@@ -85,12 +70,22 @@ namespace TabgInstaller.TestMod
 
                 if (factor <= 0f) factor = 1f;
 
-                Physics.gravity = new Vector3(0f, -9.81f * factor, 0f);
-                Console.WriteLine($"[GravityMod] Gravity multiplier set to {factor}x (Y={Physics.gravity.y})");
+                _currentGravityMult = factor;
+                Physics.gravity = new Vector3(0f, -9.81f * _currentGravityMult, 0f);
+                Console.WriteLine($"[GravityMod] Gravity multiplier set to {_currentGravityMult}x (Y={Physics.gravity.y})");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[GravityMod] Error processing /gravity command: {ex}");
+            }
+        }
+
+        private IEnumerator GravityLoop()
+        {
+            while (true)
+            {
+                Physics.gravity = new Vector3(0f, -9.81f * _currentGravityMult, 0f);
+                yield return new WaitForSeconds(1f);
             }
         }
     }
