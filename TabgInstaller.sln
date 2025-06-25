@@ -8,8 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabgInstaller.Gui", "TabgIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabgInstaller.AntiCheatBypass", "TabgInstaller.AntiCheatBypass\TabgInstaller.AntiCheatBypass.csproj", "{FFEA6A5C-7CDF-400D-A87F-FD95D41CEB1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabgInstaller.TestMod", "TabgInstaller.TestMod\TabgInstaller.TestMod.csproj", "{7E27CC01-1033-4E5E-801C-10D1B8CA3B84}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigSanitizer", "ConfigSanitizer\ConfigSanitizer.csproj", "{8C0E2F76-7AC5-408C-AE68-A8B2F2830025}"
 EndProject
 
@@ -31,10 +29,6 @@ Global
 		{FFEA6A5C-7CDF-400D-A87F-FD95D41CEB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFEA6A5C-7CDF-400D-A87F-FD95D41CEB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFEA6A5C-7CDF-400D-A87F-FD95D41CEB1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E27CC01-1033-4E5E-801C-10D1B8CA3B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E27CC01-1033-4E5E-801C-10D1B8CA3B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E27CC01-1033-4E5E-801C-10D1B8CA3B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E27CC01-1033-4E5E-801C-10D1B8CA3B84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C0E2F76-7AC5-408C-AE68-A8B2F2830025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C0E2F76-7AC5-408C-AE68-A8B2F2830025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C0E2F76-7AC5-408C-AE68-A8B2F2830025}.Release|Any CPU.ActiveCfg = Release|Any CPU
