@@ -23,17 +23,6 @@
 
 ---
 
-## Features
-
-* **One‑click install** – wizard detects your Steam library & sets everything up automatically.
-* **BepInEx 5 built‑in** – modern Unity mod loader configured out of the box.
-* **StarterPack autoconfig** – downloads the latest release and walks you through its GUI.
-* **Community plug‑ins** – optional grab‑and‑go install for *CitrusLib*, *TABGCommunityServer*, and more.
-* **Anti‑cheat bypass** – safely disables EAC/EOS on headless servers so mods can load.
-* **Self‑healing** – cleans stale files, validates UTF‑8 configs with `ConfigSanitizer`, and keeps everything tidy.
-
----
-
 ## Quick Install & how to use it
 
 1. Download the latest **`TabgInstaller.Gui.zip`** from the [releases page](../../releases).
